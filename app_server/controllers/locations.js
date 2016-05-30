@@ -7,10 +7,10 @@ module.exports.homelist = function(req, res, next) {
 
 // Location Info
 module.exports.locationInfo = function(req, res, next) {
-  res.render('index', {title : 'Location info'});
+  res.render('location-info', {title : 'Location info'});
 };
 
 // Add Review Page
 module.exports.addReview = function(req, res, next) {
-  res.render('index', {title : 'Add Review'});
+  res.render('location-review-form', {title : 'Add Review'});
 };
