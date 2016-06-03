@@ -1,7 +1,14 @@
 var mongoose = require('mongoose');
 
 var dbURI = 'mongodb://localhost/Loc8r';
+// If on production use MONGOLAB_URI
+// heroku config:set MONGOLAB_URL=URIHEREHEREHERE
 
+if (process.env.NODE_ENV === 'production') {
+  dbURI = process.env.MONGOLAB_URI;
+}
+
+// Now we connect to the database :)
 mongoose.connect(dbURI);
 
 
